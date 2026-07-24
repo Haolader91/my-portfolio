@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -23,15 +23,8 @@ export default function BlogDetailsPage() {
   const params = useParams();
   const slug = params?.slug as string;
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
-  const [currentUrl, setCurrentUrl] = useState("");
 
   const blogData = blogsData.find((blog) => blog.slug === slug);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentUrl(window.location.href);
-    }
-  }, []);
 
   const handleCopyCode = (codeText: string, idx: number) => {
     navigator.clipboard.writeText(codeText);
@@ -40,7 +33,7 @@ export default function BlogDetailsPage() {
   };
 
   const handleShare = (platform: "twitter" | "linkedin" | "facebook") => {
-    const url = encodeURIComponent(currentUrl);
+    const url = encodeURIComponent(typeof window !== "undefined" ? window.location.href : "");
     const title = encodeURIComponent(blogData?.title || "");
 
     let shareUrl = "";
