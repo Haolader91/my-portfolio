@@ -8,6 +8,10 @@ import { FaReact, FaJsSquare, FaNodeJs } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { learningSteps } from "@/types/hero";
 
+export const metadata: Metadata = {
+  title: "Home page",
+};
+
 export default function HeroSection() {
   return (
     <section

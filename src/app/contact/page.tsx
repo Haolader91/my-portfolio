@@ -2,7 +2,12 @@
 
 import React, { useState } from "react";
 import { FiSend, FiCheckCircle, FiLoader } from "react-icons/fi";
-import { contactDetails, socialLinks } from "@/types/contact"; // 👈 ডাটা ইম্পোর্ট করা হলো
+import { contactDetails, socialLinks } from "@/types/contact";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact page",
+};
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({

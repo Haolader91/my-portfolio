@@ -8,7 +8,12 @@ import {
   FiMapPin,
   FiCheckCircle,
 } from "react-icons/fi";
-import { educationData } from "@/types/education"; // 👈 ডাটা ইম্পোর্ট করা হলো
+import { educationData } from "@/types/education";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Education page",
+};
 
 export default function EducationSection() {
   return (

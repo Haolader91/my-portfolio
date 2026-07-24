@@ -6,9 +6,14 @@ import Link from "next/link";
 import { FiExternalLink, FiInfo } from "react-icons/fi";
 import projectsDataRaw from "@/data/projects.json";
 import { Project } from "@/types/project";
+import { Metadata } from "next";
 
 const projectsData = projectsDataRaw as Project[];
 const categories = ["All", "React", "Next.js", "Node.js", "MongoDB"];
+
+export const metadata: Metadata = {
+  title: "Projects page",
+};
 
 export default function ProjectsSection() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
