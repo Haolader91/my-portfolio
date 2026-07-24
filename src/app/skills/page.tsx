@@ -2,11 +2,6 @@
 
 import React from "react";
 import { skillCategories } from "@/types/skills";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Skill page",
-};
 
 export default function SkillsSection() {
   return (

@@ -5,13 +5,8 @@ import Link from "next/link";
 import { FiArrowRight, FiClock, FiCalendar } from "react-icons/fi";
 import blogsDataRaw from "@/data/blogs.json";
 import { BlogPost } from "@/types/blog";
-import { Metadata } from "next";
 
 const blogsData = blogsDataRaw as BlogPost[];
-
-export const metadata: Metadata = {
-  title: "Blog page",
-};
 
 export default function BlogSection() {
   return (

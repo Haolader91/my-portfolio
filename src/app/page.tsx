@@ -7,11 +7,6 @@ import { FiArrowRight } from "react-icons/fi";
 import { FaReact, FaJsSquare, FaNodeJs } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { learningSteps } from "@/types/hero";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Home page",
-};
 
 export default function HeroSection() {
   return (

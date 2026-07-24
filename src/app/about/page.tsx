@@ -4,11 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 import { infoList, services, cvDownloadUrl } from "@/types/about";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About Me",
-};
 
 export default function AboutSection() {
   return (

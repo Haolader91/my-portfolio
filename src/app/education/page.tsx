@@ -9,11 +9,6 @@ import {
   FiCheckCircle,
 } from "react-icons/fi";
 import { educationData } from "@/types/education";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Education page",
-};
 
 export default function EducationSection() {
   return (

@@ -3,11 +3,6 @@
 import React from "react";
 import { FiCalendar, FiBriefcase } from "react-icons/fi";
 import { journeyData } from "@/types/journey";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Journey page",
-};
 
 export default function JourneySection() {
   return (
