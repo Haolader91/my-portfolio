@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiDownload, FiMenu, FiX } from "react-icons/fi";
-import { navItems, socialLinks, cvDownloadUrl } from "@/types/sidebar"; // 👈 ডাটা ইম্পোর্ট করা হলো
+import { navItems, socialLinks, cvDownloadUrl } from "@/types/sidebar";
 
 export default function Sidebar() {
   const pathname = usePathname();

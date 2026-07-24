@@ -267,7 +267,7 @@ export default function ProjectDetailsPage() {
           </h2>
 
           <div className="bg-[#0b0c18] border border-slate-800/80 rounded-2xl p-6 overflow-x-auto scrollbar-none">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 min-w-[650px]">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 min-w-162.5">
               <div className="space-y-3 text-center">
                 <div className="w-10 h-10 mx-auto rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold border border-purple-500/20">
                   <FiTarget className="w-5 h-5" />

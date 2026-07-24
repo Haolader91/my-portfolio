@@ -7,6 +7,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { FaReact, FaJsSquare, FaNodeJs } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { learningSteps } from "@/types/hero";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Home page",
@@ -19,7 +20,7 @@ export default function HeroSection() {
       className="relative min-h-screen lg:h-screen w-full flex flex-col justify-between items-center px-4 sm:px-6 py-4 lg:py-6 overflow-hidden bg-[#070811] text-slate-100"
     >
       {/* Background Soft Glow */}
-      <div className="absolute top-1/3 left-1/4 -translate-y-1/2 -translate-x-1/2 w-[300px] sm:w-[500px] lg:w-[600px] h-[300px] sm:h-[500px] lg:h-[600px] bg-purple-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 -translate-y-1/2 -translate-x-1/2 w-75 sm:w-125 lg:w-150 h-75 sm:h-125 lg:h-150 bg-purple-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
       {/* Top Main Hero Area */}
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center z-10 my-auto">
@@ -52,7 +53,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 sm:gap-2.5 bg-gradient-to-r from-[#8b5cf6] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#6d28d9] text-white font-medium text-xs sm:text-sm px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 sm:gap-2.5 bg-linear-to-r from-[#8b5cf6] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#6d28d9] text-white font-medium text-xs sm:text-sm px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-0.5"
             >
               <span>Hire Me</span>
               <FiArrowRight className="w-4 h-4" />
