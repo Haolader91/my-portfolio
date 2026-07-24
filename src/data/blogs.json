@@ -1,0 +1,131 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Next.js 15 & App Router",
+    "slug": "getting-started-with-nextjs-15",
+    "subtitle": "A comprehensive guide to understanding Server Components, Action functions, and optimizing performance in modern web development.",
+    "date": "May 20, 2026",
+    "readTime": "5 min read",
+    "description": "Learn how to build modern, fast, and SEO-friendly web applications with Next.js.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+    "author": "AK Haolader",
+    "authorRole": "Web Designer & Developer",
+    "authorImage": "/profile.png",
+    "tags": ["Next.js", "React", "Web Dev", "Tutorial"],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Next.js has completely transformed the frontend web development landscape. With the stabilization of the App Router, building fast, scalable, and SEO-friendly applications has become more intuitive than ever before."
+      },
+      {
+        "type": "heading",
+        "text": "Why Choose Next.js for Modern Web Apps?"
+      },
+      {
+        "type": "paragraph",
+        "text": "The transition from client-side rendering to server-side capabilities allows applications to deliver zero-bundle-size React components by default. This significantly speeds up initial page load times and boosts Google lighthouse scores."
+      },
+      {
+        "type": "code",
+        "language": "tsx",
+        "code": "// Example of React Server Component in Next.js\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/data', {\n    next: { revalidate: 3600 } // Revalidate every hour\n  });\n  const data = await res.json();\n\n  return (\n    <main className=\"p-6\">\n      <h1 className=\"text-2xl font-bold\">{data.title}</h1>\n    </main>\n  );\n}"
+      },
+      {
+        "type": "heading",
+        "text": "Key Features to Focus On"
+      }
+    ],
+    "keyTakeaways": [
+      "Server Components decrease JavaScript bundle size sent to the client.",
+      "Server Actions eliminate the need for writing manual REST API boilerplate.",
+      "Built-in Image and Font optimization out-of-the-box."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Mastering Tailwind CSS Best Practices",
+    "slug": "mastering-tailwind-css-best-practices",
+    "subtitle": "Essential techniques to structure utility classes, manage component reuse, and maintain clean UI codebases.",
+    "date": "May 10, 2026",
+    "readTime": "7 min read",
+    "description": "Tips and tricks to write cleaner, reusable, and maintainable Tailwind CSS code.",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "author": "AK Haolader",
+    "authorRole": "Web Designer & Developer",
+    "authorImage": "/profile.png",
+    "tags": ["TailwindCSS", "CSS", "Frontend", "UI/UX"],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Tailwind CSS allows developers to rapidly build custom user interfaces without leaving HTML. However, without proper structure, utility-first CSS can quickly turn into messy and hard-to-maintain markup."
+      },
+      {
+        "type": "heading",
+        "text": "Leveraging Reusable Components and Helper Classes"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of duplicating long chains of utility classes across multiple elements, combine Tailwind with React component architecture or helper tools like `clsx` and `tailwind-merge`."
+      },
+      {
+        "type": "code",
+        "language": "tsx",
+        "code": "// Example combining classnames dynamically\nimport { clsx, type ClassValue } from 'clsx';\nimport { twMerge } from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}"
+      },
+      {
+        "type": "heading",
+        "text": "Optimizing for Dark Mode and Custom Themes"
+      }
+    ],
+    "keyTakeaways": [
+      "Keep components modular to prevent long utility class duplication.",
+      "Use `tailwind-merge` to handle dynamic conditional classes cleanly.",
+      "Customize `tailwind.config.js` for design system consistency."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "JWT Authentication with Node.js & Express",
+    "slug": "jwt-authentication-nodejs-express",
+    "subtitle": "Step-by-step guide to secure user routes, handle token expiration, and store JWTs safely.",
+    "date": "Apr 28, 2026",
+    "readTime": "6 min read",
+    "description": "A complete step-by-step guide to implementing secure JWT authentication in Node.js.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+    "author": "AK Haolader",
+    "authorRole": "Web Designer & Developer",
+    "authorImage": "/profile.png",
+    "tags": ["Node.js", "Express", "JWT", "Backend", "Security"],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "JSON Web Tokens (JWT) are a stateless and industry-standard method for securely transmitting information between client and server as a JSON object."
+      },
+      {
+        "type": "heading",
+        "text": "Setting Up Middleware Authentication"
+      },
+      {
+        "type": "paragraph",
+        "text": "Protecting routes requires creating an Express middleware function that extracts the bearer token from HTTP headers and verifies its signature."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// JWT Auth Middleware Example\nconst jwt = require('jsonwebtoken');\n\nfunction verifyToken(req, res, next) {\n  const authHeader = req.headers['authorization'];\n  const token = authHeader && authHeader.split(' ')[1];\n  if (!token) return res.sendStatus(401);\n\n  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {\n    if (err) return res.sendStatus(403);\n    req.user = user;\n    next();\n  });\n}"
+      },
+      {
+        "type": "heading",
+        "text": "Best Practices for Token Storage"
+      }
+    ],
+    "keyTakeaways": [
+      "Store access tokens in memory or HttpOnly cookies to mitigate XSS risks.",
+      "Always set appropriate token expiration times.",
+      "Use Refresh Tokens to silently renew user access."
+    ]
+  }
+]
