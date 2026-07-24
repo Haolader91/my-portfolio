@@ -4,58 +4,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
-import {
-  FaReact,
-  FaJsSquare,
-  FaNodeJs,
-  FaCode,
-  FaLaptopCode,
-  FaServer,
-  FaRocket,
-  FaStar,
-} from "react-icons/fa";
+import { FaReact, FaJsSquare, FaNodeJs } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
-
-const learningSteps = [
-  {
-    phase: "Phase 1",
-    title: "HTML, CSS & JS",
-    icon: FaCode,
-    color:
-      "text-emerald-400 border-emerald-500/30 bg-emerald-500/10 shadow-emerald-500/20",
-    glow: "shadow-emerald-500/30",
-  },
-  {
-    phase: "Phase 2",
-    title: "React & Tailwind",
-    icon: FaLaptopCode,
-    color: "text-blue-400 border-blue-500/30 bg-blue-500/10 shadow-blue-500/20",
-    glow: "shadow-blue-500/30",
-  },
-  {
-    phase: "Phase 3",
-    title: "Next.js & Fullstack",
-    icon: FaServer,
-    color:
-      "text-purple-400 border-purple-500/30 bg-purple-500/10 shadow-purple-500/20",
-    glow: "shadow-purple-500/30",
-  },
-  {
-    phase: "Phase 4",
-    title: "Real World Projects",
-    icon: FaRocket,
-    color:
-      "text-amber-400 border-amber-500/30 bg-amber-500/10 shadow-amber-500/20",
-    glow: "shadow-amber-500/30",
-  },
-  {
-    phase: "Current",
-    title: "Job Ready & Growing",
-    icon: FaStar,
-    color: "text-rose-400 border-rose-500/30 bg-rose-500/10 shadow-rose-500/20",
-    glow: "shadow-rose-500/30",
-  },
-];
+import { learningSteps } from "@/types/hero";
 
 export default function HeroSection() {
   return (
@@ -143,9 +94,9 @@ export default function HeroSection() {
 
         {/* Right Image Column */}
         <div className="lg:col-span-6 flex justify-center items-center relative order-1 lg:order-2 my-2 lg:my-0">
-          <div className="relative w-64 h-64 sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] flex items-center justify-center">
+          <div className="relative w-64 h-64 sm:w-95 sm:h-95 lg:w-115 lg:h-115 flex items-center justify-center">
             {/* Glowing Ring */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#7c3aed]/40 to-[#8b5cf6]/20 rounded-full blur-md border border-purple-500/40" />
+            <div className="absolute inset-0 bg-linear-to-tr from-[#7c3aed]/40 to-[#8b5cf6]/20 rounded-full blur-md border border-purple-500/40" />
 
             {/* Person Profile Image */}
             <div className="relative w-[92%] h-[92%] rounded-full overflow-hidden border-2 border-purple-500/50 z-10 shadow-2xl bg-[#0b0c16]">
