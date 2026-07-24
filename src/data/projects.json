@@ -1,0 +1,309 @@
+[
+  {
+    "id": 1,
+    "title": "Freelance Hub",
+    "description": "A modern platform for freelancers and clients to connect, post jobs, and manage work efficiently.",
+    "category": "Next.js",
+    "tags": ["Next.js", "React", "Tailwind", "JavaScript"],
+    "image": "/projects/freelancehub/freelancehub.png",
+    "liveUrl": "https://freelance-hub-ochre-five.vercel.app",
+    "githubUrl": "https://github.com",
+    "role": "Frontend Dev",
+    "duration": "1 Month",
+    "teamSize": "1 (Solo)",
+    "projectType": "Web Application",
+    "overview": "Freelance Hub is a marketplace web app designed to bridge the gap between clients and skilled freelancers with streamlined job postings, service showcases, and direct interactions.",
+    "features": [
+      {
+        "title": "Job Posting & Search",
+        "description": "Clients can post projects while freelancers can easily search and filter relevant opportunities."
+      },
+      {
+        "title": "Dynamic Dashboard",
+        "description": "User-friendly dashboard for tracking proposals, active tasks, and client feedback."
+      },
+      {
+        "title": "Responsive UI/UX",
+        "description": "Fully mobile-responsive layout crafted with clean utility-first CSS styling."
+      },
+      {
+        "title": "Fast Deployment",
+        "description": "Optimized performance and continuous deployment hosted on Vercel."
+      }
+    ],
+    "challenges": [
+      "Designing a clean UI that balances client needs and freelancer job views.",
+      "Managing complex state for dynamic job filters and listing cards."
+    ],
+    "solutions": [
+      "Created structured grid layouts and reusable component systems.",
+      "Implemented efficient reactive array handling for seamless state updates."
+    ],
+    "gallery": [
+      "/projects/freelancehub/freelancehub1.png",
+      "/projects/freelancehub/freelancehub2.png",
+      "/projects/freelancehub/freelancehub3.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "The Literary Nook",
+    "image": "/projects/literary-nook/literary-nook.png",
+    "liveUrl": "https://the-literary-nook.vercel.app",
+    "githubUrl": "https://github.com/Haolader91/literary-nook",
+    "description": "An interactive literary haven for book lovers to explore curated collections, manage personal reading lists, and participate in community book discussions.",
+    "overview": "The Literary Nook is a modern web application designed for passionate readers. It solves the issue of messy reading logs and fragmented book communities by providing a seamless, aesthetic platform where users can discover new releases, filter books by genre, track their reading journey, and engage in book club discussions with an intuitive dark-themed UI.",
+    "role": "Frontend Developer",
+    "duration": "2 Weeks",
+    "teamSize": "1 Developer",
+    "projectType": "Full-Stack Web App",
+    "category": "Next.js",
+    "tags": ["Next.js", "React", "Tailwind CSS", "DaisyUI", "MongoDB"],
+    "features": [
+      {
+        "title": "Smart Book Search & Filtering",
+        "description": "Users can instantly filter books by genre, rating, and author with dynamic client-side state handling."
+      },
+      {
+        "title": "Personal Reading Dashboard",
+        "description": "Interactive tracking system allowing users to organize books into 'Want to Read', 'Currently Reading', and 'Completed' lists."
+      },
+      {
+        "title": "Community Book Clubs",
+        "description": "Integrated discussion hubs where readers can join virtual book clubs and share reviews."
+      },
+      {
+        "title": "Interactive Lightbox Gallery",
+        "description": "High-resolution image previews of book covers and UI snapshots with zoom capabilities."
+      },
+      {
+        "title": "Responsive Dark Aesthetic",
+        "description": "Crafted with a premium dark theme optimized for readability across mobile, tablet, and desktop screens."
+      }
+    ],
+    "challenges": [
+      "Optimizing heavy image assets (book covers) for fast loading speeds on low-bandwidth networks.",
+      "Managing complex user state updates for reading progress without full-page reloads.",
+      "Ensuring seamless layout alignment across various screen dimensions."
+    ],
+    "solutions": [
+      "Utilized Next.js Image component for automatic WebP optimization and lazy loading.",
+      "Implemented optimized React state hooks and API routes to handle real-time reading list updates.",
+      "Designed flexible utility-first layout structures using Tailwind CSS and DaisyUI components."
+    ],
+    "gallery": [
+      "/projects/literary-nook/literary-nook-1.png",
+      "/projects/literary-nook/literary-nook-2.png",
+      "/projects/literary-nook/literary-nook-3.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "TicketBari",
+    "image": "/projects/ticket-bari/ticket-bari.png",
+    "liveUrl": "https://ticket-bari-client-weld.vercel.app/",
+    "githubUrl": "https://github.com/Haolader91/ticket-bari-client",
+    "description": "An all-in-one online ticket booking and reservation platform designed for seamless route searching, seat selection, and instant booking management.",
+    "overview": "TicketBari is a modern web application built to streamline travel ticketing and seat reservations. It eliminates long queues and complex booking flows by offering users an intuitive, step-by-step ticket selection interface, real-time seat availability updates, interactive seat mapping, and integrated ticket management—all packaged in a sleek, responsive UI.",
+    "role": "Frontend Developer",
+    "duration": "2 Weeks",
+    "teamSize": "1 Developer",
+    "projectType": "Full-Stack Web App",
+    "category": "Next.js",
+    "tags": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "DaisyUI",
+      "MongoDB",
+      "Express.js"
+    ],
+    "features": [
+      {
+        "title": "Interactive Seat Layout Selection",
+        "description": "Visual seat layout grid allowing users to choose preferred seats in real-time with instant price calculation."
+      },
+      {
+        "title": "Route & Schedule Search Filter",
+        "description": "Dynamic search system to filter available trips by origin, destination, journey date, and vehicle class."
+      },
+      {
+        "title": "User Booking History & Management",
+        "description": "Dedicated dashboard for passengers to view confirmed tickets, download passes, and check booking statuses."
+      },
+      {
+        "title": "Secure Booking & Checkout Flow",
+        "description": "Streamlined form validation and checkout interface for fast and reliable ticket reservations."
+      },
+      {
+        "title": "Fully Responsive & Mobile Optimized",
+        "description": "Engineered for smooth navigation on smartphones, tablets, and desktop displays."
+      }
+    ],
+    "challenges": [
+      "Handling real-time seat booking state synchronization to prevent duplicate seat selections by multiple users.",
+      "Designing an intuitive and responsive visual seat grid that renders cleanly on smaller mobile screens.",
+      "Efficiently managing multi-step reservation forms while keeping form validation smooth."
+    ],
+    "solutions": [
+      "Implemented centralized state management with immediate backend validation upon seat selection.",
+      "Crafted custom CSS Grid and Flexbox layouts optimized for touch devices and responsive screen sizes.",
+      "Utilized modular React hooks and form management patterns to handle multi-step booking data cleanly."
+    ],
+    "gallery": [
+      "/projects/ticket-bari/ticket-bari-1.png",
+      "/projects/ticket-bari/ticket-bari-2.png",
+      "/projects/ticket-bari/ticket-bari-3.png"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "StudyNook",
+    "image": "/projects/studynook/studynook.png",
+    "liveUrl": "https://assignment-nine-ten-sepia.vercel.app/",
+    "githubUrl": "https://github.com/Haolader91/studynook-client",
+    "description": "An interactive study space and library slot reservation platform designed for students to easily find, reserve, and manage quiet study sessions.",
+    "overview": "StudyNook is a web application built to streamline library space and study room reservations. It solves the issue of seat availability and crowded reading spaces by enabling students to browse study hubs, check real-time slot availability, reserve seats in advance, and track their booked study hours through a clean, modern interface.",
+    "role": "Frontend Developer",
+    "duration": "1.5 Weeks",
+    "teamSize": "1 Developer",
+    "projectType": "Full-Stack Web App",
+    "category": "React",
+    "tags": [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Firebase Auth",
+      "MongoDB"
+    ],
+    "features": [
+      {
+        "title": "Study Hub & Slot Exploration",
+        "description": "Browse various study rooms and quiet reading spaces with detailed filters for capacity, amenities, and locations."
+      },
+      {
+        "title": "Real-time Seat & Slot Booking",
+        "description": "Seamlessly reserve study slots and desks for specific times and days with instant confirmation."
+      },
+      {
+        "title": "Authentication & Student Profile",
+        "description": "Secure sign-in with Google and email, giving students access to their personalized booking history."
+      },
+      {
+        "title": "Personal Booking Management",
+        "description": "Dedicated dashboard for users to review upcoming study sessions, extend time, or cancel reservations."
+      },
+      {
+        "title": "Responsive Dark & Clean UI",
+        "description": "Optimized, distraction-free interface tailored for mobile, tablet, and desktop viewports."
+      }
+    ],
+    "challenges": [
+      "Managing time-slot state updates to avoid overlapping room reservations.",
+      "Ensuring secure user authentication across private booking routes.",
+      "Designing an intuitive user interface for selecting time slots and desks on small screens."
+    ],
+    "solutions": [
+      "Implemented client and server-side validation to check slot availability before locking reservations.",
+      "Integrated Firebase Authentication with protected routes in React/Next.js.",
+      "Utilized Tailwind CSS grids and flexible card components to make room slot selection smooth on mobile devices."
+    ],
+    "gallery": [
+      "/projects/studynook/studynook-1.png",
+      "/projects/studynook/studynook-2.png",
+      "/projects/studynook/studynook-3.png"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "SkillSphere",
+    "description": "Online course learning platform with modern dashboard and authentication.",
+    "category": "Next.js",
+    "tags": ["Next.js", "Tailwind", "MongoDB"],
+    "image": "/projects/skillsphere/skillsphere.png",
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com",
+    "role": "Full Stack Dev",
+    "duration": "2 Months",
+    "teamSize": "1 (Solo)",
+    "projectType": "Web App",
+    "overview": "SkillSphere is a modern online course platform that allows students to enroll, track their progress, and access high-quality interactive video courses.",
+    "features": [
+      {
+        "title": "User Authentication",
+        "description": "Secure NextAuth & JWT login with role protection."
+      },
+      {
+        "title": "Course Management",
+        "description": "Categorized course catalogs with search and dynamic filtering."
+      },
+      {
+        "title": "Interactive Dashboard",
+        "description": "Dedicated dashboard for students and instructors."
+      },
+      {
+        "title": "Responsive UI",
+        "description": "Clean, mobile-first design built with Tailwind CSS."
+      }
+    ],
+    "challenges": [
+      "Handling dynamic course video streaming efficiently.",
+      "Building a complex state management for user progress tracking."
+    ],
+    "solutions": [
+      "Optimized media delivery and structured MongoDB queries.",
+      "Used React Context & Custom Hooks for seamless state flow."
+    ],
+    "gallery": [
+      "/projects/skillsphere/skillsphere.png",
+      "/projects/skillsphere/skillsphere-1.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "KeenKeeper",
+    "description": "Friendship tracking application with interaction analytics and call timeline.",
+    "category": "React",
+    "tags": ["React", "Tailwind", "Node.js"],
+    "image": "/projects/keenkeeper/keenkeeper.png",
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com",
+    "role": "Frontend Dev",
+    "duration": "1 Month",
+    "teamSize": "1 (Solo)",
+    "projectType": "Web App",
+    "overview": "KeenKeeper helps you maintain meaningful connections with friends by tracking interaction frequency, call timelines, and important milestones.",
+    "features": [
+      {
+        "title": "Interaction Analytics",
+        "description": "Visual breakdown of recent calls, messages, and meetups."
+      },
+      {
+        "title": "Call Timeline",
+        "description": "Sequential timeline view of all friend interactions."
+      },
+      {
+        "title": "Status Badges",
+        "description": "Smart indicators showing active or overdue follow-ups."
+      },
+      {
+        "title": "Custom Tags",
+        "description": "Organize friends by custom groups and priority levels."
+      }
+    ],
+    "challenges": [
+      "Designing an intuitive timeline layout for mobile screens.",
+      "Calculating overdue follow-ups based on dynamic timestamps."
+    ],
+    "solutions": [
+      "Built a flexible flexbox/grid layout optimized for touch targets.",
+      "Wrote custom date utility functions using JavaScript Date API."
+    ],
+    "gallery": [
+      "/projects/keenkeeper/keenkeeper-1.png",
+      "/projects/keenkeeper/keenkeeper-2.png",
+      "/projects/keenkeeper/keenkeeper-3.png"
+    ]
+  }
+]
