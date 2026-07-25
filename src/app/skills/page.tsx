@@ -7,7 +7,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="relative min-h-screen w-full flex flex-col justify-center items-center px-4 sm:px-6 py-8 sm:py-12 bg-[#070811] text-slate-100 overflow-hidden box-border"
+      className="relative min-h-screen w-full flex flex-col justify-center items-center px-4 sm:px-6 py-8 sm:py-12 bg-[#070811] text-slate-100 overflow-hidden box-border pt-20 sm:pt-24"
     >
       <div className="max-w-6xl w-full mx-auto space-y-5 sm:space-y-6 z-10 my-auto">
         {/* Section Title */}

@@ -8,11 +8,26 @@ import { FaReact, FaJsSquare, FaNodeJs } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { learningSteps } from "@/types/hero";
 
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+
 export default function HeroSection() {
+  const [text] = useTypewriter({
+    words: [
+      "Frontend Developer",
+      "Full Stack Developer",
+      "React & Next.js Dev",
+      "MERN Stack Developer",
+    ],
+    loop: true,
+    typeSpeed: 80,
+    deleteSpeed: 50,
+    delaySpeed: 1800,
+  });
+
   return (
     <section
       id="home"
-      className="relative min-h-screen lg:h-screen w-full flex flex-col justify-between items-center px-4 sm:px-6 py-4 lg:py-6 overflow-hidden bg-[#070811] text-slate-100"
+      className="relative min-h-screen lg:h-screen w-full flex flex-col justify-between items-center px-4 sm:px-6 py-4 lg:py-6 overflow-hidden bg-[#070811] text-slate-100 pt-20 sm:pt-24"
     >
       {/* Background Soft Glow */}
       <div className="absolute top-1/3 left-1/4 -translate-y-1/2 -translate-x-1/2 w-75 sm:w-125 lg:w-150 h-75 sm:h-125 lg:h-150 bg-purple-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
@@ -33,8 +48,9 @@ export default function HeroSection() {
           </h1>
 
           {/* Subtitle / Role */}
-          <h2 className="text-lg sm:text-2xl font-semibold text-slate-300">
-            Frontend & Web Developer
+          <h2 className="text-lg sm:text-2xl font-semibold text-slate-300 min-h-9">
+            <span className="text-purple-400">{text}</span>
+            <Cursor cursorColor="#8b5cf6" cursorStyle="|" />
           </h2>
 
           {/* Description */}
@@ -132,7 +148,6 @@ export default function HeroSection() {
       {/* Bottom Section: Skill Growth Roadmap */}
       <div className="max-w-6xl w-full mx-auto z-10 shrink-0 mt-1">
         <div className="bg-[#0b0c18]/80 border border-slate-800/80 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
-          {/* Header Badge */}
           <div className="flex items-center gap-2 mb-2 sm:mb-3">
             <span className="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></span>
             <h3 className="text-xs sm:text-sm font-bold text-white tracking-wide">
@@ -140,9 +155,7 @@ export default function HeroSection() {
             </h3>
           </div>
 
-          {/* Timeline Nodes Container */}
           <div className="relative flex flex-row items-center justify-between gap-1 sm:gap-4">
-            {/* Horizontal Connecting Line */}
             <div className="absolute top-4 sm:top-5 left-[6%] right-[6%] h-[1.5px] border-b border-dashed border-slate-700/80 z-0" />
 
             {learningSteps.map((step, idx) => {
@@ -152,14 +165,12 @@ export default function HeroSection() {
                   key={idx}
                   className="relative z-10 flex flex-col items-center text-center group p-1 rounded-lg flex-1"
                 >
-                  {/* Icon Circle */}
                   <div
                     className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center border ${step.color} shadow-md ${step.glow} transition-transform duration-300 group-hover:scale-110 bg-[#0b0c18]`}
                   >
                     <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
 
-                  {/* Phase & Title */}
                   <span className="mt-1 text-[10px] sm:text-xs font-semibold text-purple-400">
                     {step.phase}
                   </span>

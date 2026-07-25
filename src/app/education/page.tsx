@@ -14,7 +14,7 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="relative min-h-screen lg:h-screen w-full bg-[#070811] text-slate-100 px-4 sm:px-6 py-6 lg:py-8 flex flex-col justify-between items-center overflow-hidden box-border"
+      className="relative min-h-screen lg:h-screen w-full bg-[#070811] text-slate-100 px-4 sm:px-6 py-6 lg:py-8 flex flex-col justify-between items-center overflow-hidden box-border pt-20 sm:pt-24"
     >
       <div className="max-w-4xl w-full mx-auto space-y-4 sm:space-y-5 z-10 my-auto">
         {/* Header */}

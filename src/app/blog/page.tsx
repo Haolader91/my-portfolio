@@ -12,7 +12,7 @@ export default function BlogSection() {
   return (
     <section
       id="blog"
-      className="relative min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 py-12 sm:py-20 bg-[#070811] text-slate-100 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 py-12 sm:py-20 bg-[#070811] text-slate-100 overflow-hidden pt-20 sm:pt-24"
     >
       <div className="max-w-6xl w-full mx-auto space-y-10 z-10">
         {/* Section Header */}

@@ -36,7 +36,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 py-12 sm:py-20 bg-[#070811] text-slate-100 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 py-12 sm:py-20 bg-[#070811] text-slate-100 overflow-hidden pt-20 sm:pt-24"
     >
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center z-10">
         {/* Left Side: Contact Info & Texts */}
