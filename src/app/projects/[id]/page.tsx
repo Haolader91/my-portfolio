@@ -9,7 +9,6 @@ import { Project } from "@/types/project";
 import {
   FiArrowLeft,
   FiExternalLink,
-  FiGithub,
   FiUser,
   FiClock,
   FiUsers,
@@ -24,6 +23,8 @@ import {
   FiCloud,
   FiImage,
   FiX,
+  FiServer,
+  FiTerminal,
 } from "react-icons/fi";
 
 const projectsData = projectsDataRaw as Project[];
@@ -94,25 +95,43 @@ export default function ProjectDetailsPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-3">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#8b5cf6] hover:bg-[#7c3aed] text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-purple-500/20 active:scale-95"
-              >
-                <FiExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
-              </a>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#8b5cf6] hover:bg-[#7c3aed] text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-purple-500/20 active:scale-95"
+                >
+                  <FiExternalLink className="w-4 h-4" />
+                  <span>Live Demo</span>
+                </a>
+              )}
 
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#0b0c18] hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition-all active:scale-95"
-              >
-                <FiGithub className="w-4 h-4" />
-                <span>GitHub</span>
-              </a>
+              {/* Client Code Link */}
+              {project.clientGithub && (
+                <a
+                  href={project.clientGithub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#0b0c18] hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition-all active:scale-95"
+                >
+                  <FiTerminal className="w-4 h-4 text-purple-400" />
+                  <span>Client Code</span>
+                </a>
+              )}
+
+              {/* Server Code Link (Dynamically Renders only if exists) */}
+              {project.serverGithub && (
+                <a
+                  href={project.serverGithub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#0b0c18] hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition-all active:scale-95"
+                >
+                  <FiServer className="w-4 h-4 text-emerald-400" />
+                  <span>Server Code</span>
+                </a>
+              )}
             </div>
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
@@ -121,7 +140,7 @@ export default function ProjectDetailsPage() {
 
             {/* Tech Badges */}
             <div className="flex flex-wrap gap-2 pt-1">
-              {project.tags.map((tech, idx) => (
+              {project.tags?.map((tech, idx) => (
                 <span
                   key={idx}
                   className="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-[#0b0c18] text-slate-300 border border-slate-800/80"
@@ -243,7 +262,7 @@ export default function ProjectDetailsPage() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {project.features.map((feat, idx) => (
+            {project.features?.map((feat, idx) => (
               <div
                 key={idx}
                 className="bg-[#0b0c18] border border-slate-800/80 rounded-2xl p-5 space-y-3 hover:border-purple-500/30 transition-all"
@@ -344,7 +363,7 @@ export default function ProjectDetailsPage() {
                 <span>Challenges</span>
               </h3>
               <ul className="space-y-3 text-xs sm:text-sm text-slate-300">
-                {project.challenges.map((item, idx) => (
+                {project.challenges?.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5">
                     <span className="text-red-400 font-bold">✕</span>
                     <span>{item}</span>
@@ -359,7 +378,7 @@ export default function ProjectDetailsPage() {
                 <span>Solutions</span>
               </h3>
               <ul className="space-y-3 text-xs sm:text-sm text-slate-300">
-                {project.solutions.map((item, idx) => (
+                {project.solutions?.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5">
                     <span className="text-emerald-400 font-bold">✓</span>
                     <span>{item}</span>
@@ -378,7 +397,7 @@ export default function ProjectDetailsPage() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {project.gallery.map((imgSrc, idx) => {
+            {project.gallery?.map((imgSrc, idx) => {
               const cleanSrc = formatImagePath(imgSrc);
               return (
                 <div

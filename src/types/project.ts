@@ -11,7 +11,8 @@ export interface Project {
   overview: string;
   image: string;
   liveUrl: string;
-  githubUrl: string;
+  clientGithub: string;
+  serverGithub: string;
   tags: string[];
   role: string;
   duration: string;
