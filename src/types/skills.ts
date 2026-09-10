@@ -18,6 +18,8 @@ import {
   SiPostman,
   SiVercel,
   SiNetlify,
+  SiPostgresql,
+  SiPrisma,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
 import { TbApi } from "react-icons/tb";
@@ -54,6 +56,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "MongoDB", icon: SiMongodb, color: "text-emerald-500" },
       { name: "JWT", icon: SiJsonwebtokens, color: "text-pink-500" },
       { name: "REST API", icon: TbApi, color: "text-purple-400" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "text-green-400" },
+      { name: "Prisma ", icon: SiPrisma, color: "text-pink-500" },
     ],
   },
   {

@@ -73,7 +73,7 @@ export default function AboutSection() {
                     AK Haolader
                   </h3>
                   <p className="text-xs text-purple-400 font-medium tracking-wider">
-                    Web Designer & Developer
+                    Frontend Developer | React & Next.js
                   </p>
                 </div>
               </div>
