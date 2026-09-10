@@ -27,7 +27,7 @@ export interface SocialLink {
 }
 
 export const cvDownloadUrl =
-  "https://drive.google.com/uc?export=download&id=1GHL3zzQbN8yOT_JlZOwKGzQMe-a_9m2b";
+  "https://drive.google.com/file/d/1RAE7iOerj8cmWrVWrXjf0uS4BC2VZv32/view?usp=sharing";
 
 export const navItems: NavItem[] = [
   { name: "Home", href: "/", icon: FiHome },
